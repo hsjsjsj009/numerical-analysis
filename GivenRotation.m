@@ -13,7 +13,7 @@ function [R, bt] = GivenRotation(A, b)
       A(k,k:n+1) = temp_k; 
       A(i,k:n+1) = temp_i;
       rotation = [c,s;-s,c]
-      matrix = A(:,1:n)
+      matrix = A(:,:)
     endfor 
   endfor 
   R = A(:,1:n); 
