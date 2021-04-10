@@ -14,7 +14,7 @@ function [R,bt] = myQR(A,b)
       # Hx = x - 2*v'*x*v/(v'*v)
       A(k:m,j) = A(k:m,j)-alpha*v'*A(k:m,j)*v;
     endfor
-    matrix = A(:,1:n)
+    matrix = A
   endfor
   # R = Q'*A
   # bt = Q'*b

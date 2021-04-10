@@ -1,18 +1,18 @@
 function [x,n] = bisectionSolv(a,b,tol)
   n = 0;
-  fa = exp(-a)-0.5*a;
-  fb = exp(-b)-0.5*b;
+  fa = a^3-2^a;
+  fb = b^3-2^b;
   while b-a>tol
     m = (a+b)/2;
-    fm = exp(-m)-0.5*m;
+    fm = m^3-2^m;
     if fm*fa<0
-      b = m;
+      b = m
       fb = fm;
     else
-      a = m;
+      a = m
       fa = fm;
     end
-    n = n+1;
+    n = n+1
   endwhile
   x = m;
 endfunction
